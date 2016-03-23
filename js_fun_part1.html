@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+	<meta charset='utf-8'>
+	<title>Javascript Fundamentals Part 1</title>
+
+	<script>
+
+	var x = [3, 5, "Dojo", "rocks", "Michael", "Sensei"];
+	for(var i = 0; i < x.length; i++){
+		console.log(x[i]);
+	}
+
+// <------------->
+
+	x.push(100);
+	for(var i = 0; i < x.length; i++){
+		console.log(x[i]);
+	}
+
+// <------------->
+
+	var sum = 0;
+	for(var k = 0; k < 501; k++){
+		sum += k;
+	}
+		console.log(sum);
+
+// <------------->
+
+	var array =  [1, 5, 90, 25, -3, 0];
+	var min = array[0];
+	for(var i = 0; i < array.length; i++){
+		if(array[i] < min){
+			min = array[i];
+		}
+	}
+	console.log(min);
+
+// <------------->
+
+	var array = [1, 5, 90, 25, -3, 0];
+	var avg = 0;
+	var sum = 0;
+	for(var i = 0; i < array.length; i++){
+		sum += array[i];
+	}
+	avg = sum/array.length;
+	console.log(avg);
+
+	</script>
+	
+</head>
+<body>
+	<h1>SUCH FUN</h1>
+</body>
+</html>

@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+	<meta charset='utf-8'>
+	<title>Interpreter</title>
+
+	<script>
+
+	  // Example problem 1
+	// console.log(hello);
+	// var hello = "interesting";
+	// function example() {
+	//   var hello = "hi!"
+	//   console.log(hello)
+	// }
+	// example();
+	// console.log(hello)
+	//       // Example problem 2
+	//                            // rearranged code with output predictions
+	// var hello;                 // var hello declaration floats to the top
+	// console.log(hello);        // this will print undefined
+	// hello = "interesting";     // assignment stays where it is
+	// function example() {       // function is like a cage
+	//   var hello;               // variable declaration floats to the top of the cage
+	//   hello = "hi";            // notice that we split up the declaration and assignment
+	//   console.log(hello)       // this will print "hi"
+	// }
+	// example();                 // this actually runs the function
+	// console.log(hello);        // this prints "interesting" because it refers to the global var 'hello'
+
+
+
+	// Problem 1
+	console.log(first_variable);
+	var first_variable = "Yipee I was first!";
+	function firstFunc() {
+	  first_variable = "Not anymore!!!";
+	  console.log(first_variable)
+	}
+	console.log(first_variable); //prints yipee i was first
+
+	//interpretation
+	// var first_variable;
+	// console.log(first_variable);
+	// first_variable = "Yipee I was first!";
+	// function firstFunc(){
+	// 	var first_variable;
+	// 	first_variable = "Not anymore!";
+	// 	console.log(first_variable);
+	// }
+	// console.log(first_variable);
+
+	                           
+
+	// Problem 2
+	var food = "Chicken";
+	function eat() {
+	  food = "half-chicken";
+	  console.log(food);
+	  var food = "gone";       // NOTE: I'M TRYING TO TRICK YOU HERE!!!!
+	}
+	eat(); //prints half-chicken
+	console.log(food); //prints chicken
+	             
+	//Interpretation
+	// var food = "Chicken";
+	// function eat(){
+	// 	food = "half-chicen";
+	// 	var food = "gone";
+	// 	console.log(food);
+	// }             
+	// eat();
+	// console.log(food);
+
+
+	// Problem 3
+	var new_word = "NEW!";
+	function lastFunc() {
+	  new_word = "old";
+	}
+	console.log(new_word); //prints new
+
+	//Interpretation
+	// var new_word = "NEW!";
+	// function lastFunc(){
+	// 	new_word = "old";
+	// }
+	// console.log(new_word);
+
+	</script>
+</head>
+<body>
+
+</body>
+</html>

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+	<meta charset='utf-8'>
+	<title>Javascript Fundamentals Part 1</title>
+
+	<script>
+
+	function PersonConstructor(name){
+		person = {
+			name : name,
+			distance_traveled : 0,
+			say_name : function(){
+			  alert("Hello, my name is " + person.name);
+			},
+			say_something : function(something){
+			    alert(something);
+			},
+			walk : function(){
+				alert(person.name + " is walking..");
+			},
+			run : function(){
+				alert(person.name + " is running..");
+			},
+			crawl : function(){
+				alert(person.name + " is crawling..");
+			}
+		};
+		return person;
+	}
+
+	var peep = PersonConstructor("Ali");
+	peep.say_name();
+	peep.say_something();
+	peep.walk();
+	peep.run();
+	peep.crawl();
+	console.log(peep);
+
+	function NinjaConstructor(name){
+		var ninja = {
+			name : name,
+			belt_level : 1,
+			levelUp : function(){
+				ninja.belt_level++;
+			}
+		}
+		return ninja;
+	}
+
+	var newNinja = NinjaConstructor("Bro");
+	newNinja.levelUp();
+	console.log(newNinja);
+
+	</script>
+	
+</head>
+<body>
+	<h1>SUCH FUN</h1>
+</body>
+</html>
